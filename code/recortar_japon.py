@@ -15,11 +15,11 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 
 # ───────────── CONFIGURACIÓN ─────────────
-#ARCHIVO_TEXTURA = "world.topo.200407.3x21600x21600.D1.jpg"        # tesela D1 de Blue Marble
-ARCHIVO_ELEVACION = "gebco_08_rev_bath_D1_grey_geo.jpg"  # mapa de elevación global (gris)
+ARCHIVO_TEXTURA = "world.topo.200407.3x21600x21600.D1.jpg"        # tesela D1 de Blue Marble
+ARCHIVO_ELEVACION = "gebco_08_rev_elev_D1_grey_geo.jpg"  # mapa de elevación global (gris)
 
-#SALIDA_TEXTURA = "japon_textura.jpg"
-SALIDA_ELEVACION = "japon_batimetria.png"
+SALIDA_TEXTURA = "japon_textura.jpg"
+SALIDA_ELEVACION = "japon_elevacion.png"
 
 # Zona a recortar (grados). Deben coincidir con los de la descarga de la USGS.
 MIN_LON, MAX_LON = 128, 146
@@ -61,13 +61,13 @@ def caja_recorte(ancho_img, alto_img, lon_min_img, lat_max_img, grados_ancho, gr
 
 # ---------- 1. Textura en color (tesela D1: 90° x 90°) ----------
 print("Abriendo textura...")
-#tex = Image.open(ARCHIVO_TEXTURA)
-#caja = caja_recorte(tex.width, tex.height, TESELA_LON_MIN, TESELA_LAT_MAX, 90, 90)
-#print(f"  Tamaño tesela: {tex.size}, recorte (izq, arriba, der, abajo): {caja}")
-#tex_recorte = tex.crop(caja).convert("RGB")
-#tex_recorte = tex_recorte.resize((ANCHO_FINAL, ALTO_FINAL), Image.LANCZOS)
-#tex_recorte.save(SALIDA_TEXTURA, quality=92)
-#print(f"  Guardada: {SALIDA_TEXTURA}")
+tex = Image.open(ARCHIVO_TEXTURA)
+caja = caja_recorte(tex.width, tex.height, TESELA_LON_MIN, TESELA_LAT_MAX, 90, 90)
+print(f"  Tamaño tesela: {tex.size}, recorte (izq, arriba, der, abajo): {caja}")
+tex_recorte = tex.crop(caja).convert("RGB")
+tex_recorte = tex_recorte.resize((ANCHO_FINAL, ALTO_FINAL), Image.LANCZOS)
+tex_recorte.save(SALIDA_TEXTURA, quality=92)
+print(f"  Guardada: {SALIDA_TEXTURA}")
 
 # ---------- 2. Elevación (mapa global: lon -180..180, lat -90..90) ----------
 print("Abriendo elevación...")
