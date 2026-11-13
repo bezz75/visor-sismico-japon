@@ -107,13 +107,13 @@ function Map2Range(val, vmin, vmax, dmin, dmax) {
 
 **Vídeo (30 segundos):** [ENLACE AL VÍDEO]([Enlace](https://youtu.be/yzi2GHLUQNA))
 
-![Vista general](vista_general.png)  
+![Vista general](images/vista_general.png)  
 *Vista general del mapa de Japón con relieve y terremotos*
 
-![Terremoto de Tohoku](tohoku.png)  
+![Terremoto de Tohoku](images/tohoku.png)  
 *Terremoto de Tohoku del 11 de marzo de 2011 (magnitud 9,1) y sus réplicas*
 
-![Leyenda](leyenda.png)
+![Leyenda](images/leyenda.png)
 *Leyenda de profundidad (color) y magnitud (tamaño)*
 
 **Qué se observa.**
