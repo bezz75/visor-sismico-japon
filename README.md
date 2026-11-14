@@ -105,7 +105,7 @@ function Map2Range(val, vmin, vmax, dmin, dmax) {
 
 ### 8.5. Resultado
 
-**Vídeo (30 segundos):** [ENLACE AL VÍDEO]([Enlace](https://youtu.be/yzi2GHLUQNA))
+**Vídeo (30 segundos):** [ENLACE AL VÍDEO](https://youtu.be/yzi2GHLUQNA)
 
 ![Vista general](images/vista_general.png)  
 *Vista general del mapa de Japón con relieve y terremotos*
